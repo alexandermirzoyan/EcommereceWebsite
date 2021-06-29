@@ -1,0 +1,10 @@
+<div *ngIf="optionsList.length" >
+  <h2>PE-GATE Opportunity groups</h2>
+  <div *ngFor="let option of optionsList" >
+    <p>{{ option['name'] }}</p>
+  </div>
+</div>
+
+<button (click)="login()" >
+  Login to system automatically
+</button>
