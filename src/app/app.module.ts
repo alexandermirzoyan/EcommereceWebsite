@@ -13,6 +13,8 @@ import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { CounterComponent } from './counter/counter.component';
+import { HighlightDirective } from './highlight.directive';
+import { DirectiveTestingComponent } from './directive-testing/directive-testing.component';
 
 @NgModule({
   imports: [
@@ -25,6 +27,7 @@ import { CounterComponent } from './counter/counter.component';
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
       { path: 'counter', component: CounterComponent },
+      { path: 'directive', component: DirectiveTestingComponent },
     ])
   ],
   declarations: [
@@ -36,6 +39,8 @@ import { CounterComponent } from './counter/counter.component';
     CartComponent,
     ShippingComponent,
     CounterComponent,
+    HighlightDirective,
+    DirectiveTestingComponent,
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
