@@ -1,4 +1,11 @@
+.top-bar-actions-container {
+  display: flex;
+  align-items: center;
+}
 
+.counter-button-container {
+  margin-left: 15px;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
