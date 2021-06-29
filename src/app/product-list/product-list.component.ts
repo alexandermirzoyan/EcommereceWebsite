@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 import { products } from '../products';
@@ -8,7 +8,7 @@ import { products } from '../products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
   products = products;
 
   constructor(private http: HttpClient) { }
@@ -19,13 +19,6 @@ export class ProductListComponent implements OnInit {
 
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
-  }
-
-  ngOnInit(): void {
-    console.log('init');
-    this.http.get<any>('https://api.npms.io/v2/search?q=scope:angular').subscribe(data => {
-      console.log(data);
-    });
   }
 }
 
