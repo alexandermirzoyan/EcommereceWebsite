@@ -12,14 +12,22 @@ export class ApiTestComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   login() {
+    const formData: any = new FormData();
+    formData.append('email', 'ovtrvyrminybmsnzwh@twzhhq.online');
     this.http.post<any>(
-      'http://localhost/pegate_api/public/shared/login',
+      'http://localhost/pegate_api/public/shared/sendRecoveryLink',
+      formData,
       {
-        email: 'ovtrvyrminybmsnzwh@twzhhq.online',
-        password: 'Qwerty98!',
-        captcha: '',
-      },
+        headers: {
+          ['X-ID']: '1',
+          ['X-Token']: '123132131',
+        },
+      }
     )
+      .subscribe(
+        (response) => console.log(response),
+        (error) => console.log(error),
+      );
   }
 
   ngOnInit(): void {
