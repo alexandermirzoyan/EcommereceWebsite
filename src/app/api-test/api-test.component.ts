@@ -11,7 +11,7 @@ export class ApiTestComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  login() {
+  sendRecoveryLink() {
     const formData: any = new FormData();
     formData.append('email', 'ovtrvyrminybmsnzwh@twzhhq.online');
     this.http.post<any>(
